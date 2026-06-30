@@ -15,6 +15,11 @@ jobs:
         #install linter-
       - name: Install linter
         run: pip install ruff
+        #step will install pyhton
+      - name: set up python  
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: check file of liting
         run: ruff check .
